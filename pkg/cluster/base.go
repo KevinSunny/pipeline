@@ -133,6 +133,13 @@ type CreateClusterProperties struct {
 	CreateClusterBanzaiCloud *banzaicloud.CreateClusterBanzaiCloud `json:"clusterTopology,omitempty" yaml:"clusterTopology,omitempty"`
 }
 
+// ClusterBootstrapInfo for PKE provisioning
+type ClusterBootstrapInfo struct {
+	Token                    string `json:"token"`
+	DiscoveryTokenCaCertHash string `json:"discoveryTokenCaCertHash"`
+	MasterAddress            string `json:"masterAddress"`
+}
+
 // PostHookParam describes posthook params in create request
 type PostHookParam interface{}
 
